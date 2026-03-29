@@ -1,97 +1,139 @@
 # Skill Vault
 
-A personal skill library manager for Claude Code. Organize, analyze, and search through all the skills you find across the internet — with built-in security analysis.
+**Your personal library for Claude Code skills.**
 
-## Quick Start
+[Lea esto en Espanol](README.es.md)
+
+---
+
+## What is this?
+
+Imagine you have a big toy box, but instead of toys, it holds **skills** — special abilities that make Claude Code smarter.
+
+People are sharing thousands of skills online every day. The problem? They're scattered everywhere. You find one on GitHub, another on skills.sh, another someone shared on X... and then you forget where you saved them. Or worse — some of them might be harmful.
+
+**Skill Vault** is your organized, safe toy box for skills. It does three things:
+
+1. **Saves and organizes** your skills into labeled folders
+2. **Checks each skill for danger** before saving it (like a security guard for your computer)
+3. **Helps you find the right skill** when you're building something
+
+That's it. Clone it, open it with Claude, and start collecting.
+
+---
+
+## Getting Started
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/skill-vault.git
+git clone https://github.com/Hainrixz/skill-vault.git
 cd skill-vault
 claude
 ```
 
-That's it. Open the project with Claude Code and the Vault Master agent is ready. No dependencies, no setup, no build step.
+No installs. No setup. No dependencies. Just open it and go.
 
-## What It Does
+---
 
-**Skill Vault** solves three problems:
+## How It Works
 
-1. **Organize** — Save skills from GitHub, skills.sh, npm, or anywhere. Each skill is analyzed and filed into a category folder with full metadata.
+When you open this project with Claude Code, the **Vault Master** agent takes over. Think of it as your personal librarian who:
 
-2. **Analyze** — Every skill goes through a 13-point security checklist before being saved. The Vault Master flags dangerous patterns (malicious commands, data exfiltration, credential theft) and assigns a safety rating: SAFE, CAUTION, or DANGEROUS.
+- **Accepts skills** from anywhere — paste a URL, paste the content, or just tell it a name
+- **Analyzes each skill** through a 13-point security checklist and rates it: SAFE, CAUTION, or DANGEROUS
+- **Files it** in the right category folder automatically
+- **Finds skills for you** when you describe what you're building
 
-3. **Recommend** — Describe what you're building and the Vault Master searches your personal library to recommend the right skills for your project.
-
-## Commands
+### Commands
 
 | Command | What it does |
 |---------|-------------|
-| `/vault-add` | Add a skill from a GitHub URL, pasted content, skill name, or file path |
-| `/vault-search` | Search your vault by keyword or description |
-| `/vault-recommend` | Describe your project, get skill recommendations from your vault |
-| `/vault-discover` | Search external sources (skills.sh, GitHub, skillsmp.com) for new skills |
-| `/vault-list` | Display all saved skills grouped by category |
-| `/vault-stats` | View vault statistics and run a consistency check |
-| `/vault-remove` | Remove a skill from the vault |
+| `/vault-add` | Save a new skill (from URL, paste, or name) |
+| `/vault-search` | Search your vault by keyword |
+| `/vault-recommend` | Describe your project, get matching skills |
+| `/vault-discover` | Find new skills from the internet |
+| `/vault-list` | See everything in your vault |
+| `/vault-stats` | Vault stats + health check |
+| `/vault-remove` | Remove a skill |
 
-## How Skills Are Stored
+---
+
+## Folder Structure
+
+Skills are saved in category folders. Each skill gets its own file with metadata, security analysis, install instructions, and the original content preserved.
 
 ```
 categories/
-├── automation/
-│   ├── _category.md          # What this category is for
-│   ├── playwright-cli.md     # Skill entry with metadata + security analysis
-│   └── browser-automation.md
-├── design-ui/
-│   ├── _category.md
-│   └── shadcn-ui.md
-└── ...
+├── automation/          # Browser bots, scripts, task runners
+├── code-quality/        # Linting, refactoring, reviews
+├── design-ui/           # UI components, design systems, CSS
+├── devops-deploy/       # Docker, CI/CD, infrastructure
+├── documentation/       # READMEs, API docs, changelogs
+├── organization/        # Project management, planning
+├── productivity/        # Text tools, meeting notes, workflows
+├── research/            # Web research, data gathering
+├── testing/             # Unit tests, E2E, QA
+└── web-development/     # React, Next.js, Vue, APIs
 ```
 
-Each skill entry contains:
-- **Metadata** — name, source URL, category, tags, version
-- **Security analysis** — safety rating + detailed findings from the 13-point checklist
-- **Install command** — how to add the skill to your Claude Code setup
-- **Original content** — the full SKILL.md preserved for reference
+Don't see a category that fits? The Vault Master creates new ones automatically.
 
-The master index at `catalog.md` provides a searchable table of all skills.
+---
 
-## Security Analysis
+## Security
 
-Every skill is checked against a 13-point security rubric before being saved:
+Every skill is scanned before it enters your vault. The Vault Master checks for:
 
-| Rating | Meaning |
-|--------|---------|
-| **SAFE** | No shell commands, no network calls, limited tool access |
-| **CAUTION** | Uses Bash/network but commands are bounded and reasonable |
-| **DANGEROUS** | Contains suspicious patterns — requires explicit confirmation to save |
+- Dangerous commands (`rm -rf`, pipe-to-shell execution)
+- Credential theft (reading SSH keys, AWS tokens, API keys)
+- Data exfiltration (sending your files to external servers)
+- Obfuscated code (hidden payloads in base64 or hex)
+- Overly broad permissions
+- Prompt injection attempts
 
-Auto-dangerous triggers include: `rm -rf`, `curl \| bash`, credential file access, obfuscated code, data exfiltration patterns, overly broad permissions, and prompt injection attempts.
+| Rating | What it means |
+|--------|--------------|
+| **SAFE** | Clean — no risky operations detected |
+| **CAUTION** | Some risk — review the findings before using |
+| **DANGEROUS** | Red flag — you'll be warned before it's saved |
 
-See `security-rubric.md` for the full analysis methodology.
+Full methodology in [`security-rubric.md`](security-rubric.md).
 
-## Default Categories
+---
 
-| Category | What belongs here |
-|----------|-------------------|
-| `automation` | Browser automation, workflow scripting, task runners |
-| `code-quality` | Linting, refactoring, best practices, code review |
-| `design-ui` | Frontend design, UI components, design systems |
-| `devops-deploy` | Docker, CI/CD, deployment, infrastructure |
-| `documentation` | READMEs, changelogs, API docs, technical writing |
-| `organization` | Project management, workflow organization, planning |
-| `productivity` | Text processing, meeting notes, content creation |
-| `research` | Web research, data gathering, analysis |
-| `testing` | Unit tests, E2E tests, test frameworks |
-| `web-development` | React, Next.js, Vue, full-stack, APIs |
+## Example Workflow
 
-New categories are created automatically when a skill doesn't fit existing ones.
+```
+You:    /vault-add https://github.com/anthropics/skills/tree/main/skill-creator
+Vault:  Analyzing skill... Rating: SAFE
+        Saved to: categories/productivity/skill-creator.md
+        Added to catalog.
+
+You:    /vault-recommend I'm building a Next.js e-commerce app
+Vault:  From your vault, I recommend:
+        - shadcn-ui (design-ui) [SAFE] — UI components
+        - playwright-cli (testing) [CAUTION] — E2E testing
+        - vercel-deploy (devops-deploy) [SAFE] — Deployment
+
+You:    /vault-discover SEO optimization
+Vault:  Found 3 skills on skills.sh:
+        - seo-audit [SAFE] — Technical SEO analysis
+        - meta-tags-generator [SAFE] — Auto meta tags
+        Add any of these? (y/n)
+```
+
+---
 
 ## Contributing
 
 1. Fork this repo
-2. Add skills using `/vault-add` or manually create entries in `categories/` following the template in `templates/skill-entry.md`
+2. Add skills with `/vault-add` or create entries manually in `categories/` using the template at `templates/skill-entry.md`
 3. Submit a PR
+
+---
+
+## Built by
+
+[Tododeia](https://todoia.com) — Building tools for the AI community.
 
 ## License
 

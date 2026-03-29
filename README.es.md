@@ -133,7 +133,7 @@ Vault:  Encontre 3 skills en skills.sh:
 
 ## Creado por
 
-[Tododeia](https://todoia.com) — Construyendo herramientas para la comunidad de IA.
+[Todo de IA](https://todoia.com) por [@soyenriquerocha](https://instagram.com/soyenriquerocha) — Construyendo herramientas para la comunidad de IA.
 
 ## Licencia
 

@@ -133,7 +133,7 @@ Vault:  Found 3 skills on skills.sh:
 
 ## Built by
 
-[Tododeia](https://todoia.com) — Building tools for the AI community.
+[Todo de IA](https://todoia.com) by [@soyenriquerocha](https://instagram.com/soyenriquerocha) — Building tools for the AI community.
 
 ## License
 

